@@ -1,12 +1,15 @@
+require 'httparty'
 module ParkchiefClient
-  module Client
+  class Client
     include HTTParty
-    base_uri('0.0.0.0:3000/api/v1')
+    base_uri 'http://0.0.0.0:3000/api/v1'
+    # def initialize
+    #   self.class.base_uri 'http://0.0.0.0:3000/api/v1'
+    # end
 
-    def self.users
-      get "/users"
+    def users
+      self.class.get "/users"
     end
 
-    end
   end
 end
