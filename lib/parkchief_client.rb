@@ -1,5 +1,6 @@
 require "parkchief_client/version"
+require "parkchief_client/client"
 
 module ParkchiefClient
-  # Your code goes here...
+
 end
